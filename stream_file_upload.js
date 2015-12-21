@@ -10,7 +10,11 @@ http.createServer(function(request,response){
     var chunk = null;
     while(null !== (chunk = request.read())){
       uploadedBytes += chunk.length;
+<<<<<<< HEAD
       var progress = (uploadedBytes / fileBytes) * 100;
+=======
+      var progress = (uploadedBytes/fileBytes) * 100;
+>>>>>>> L3
       response.write("progress: " + parseInt(progress, 10) + "%\n");
     }
   });
